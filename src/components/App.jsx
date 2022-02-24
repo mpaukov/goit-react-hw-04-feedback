@@ -22,7 +22,8 @@ export function App() {
   };
 
   const onLeaveFeedback = event => {
-    switch (event.target.dataset.action) {
+    const { name } = event.target;
+    switch (name) {
       case 'good':
         setGood(state => state + 1);
         break;
